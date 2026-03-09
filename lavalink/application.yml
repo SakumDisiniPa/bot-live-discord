@@ -1,0 +1,41 @@
+server:
+  port: 2333
+  address: 0.0.0.0 # Pakai 0.0.0.0 supaya lebih stabil di Ubuntu
+
+lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.0" # Plugin YouTube terbaru
+  server:
+    password: "Padaherang"
+    sources:
+      youtube: false # Wajib false karena kita pakai plugin di atas
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+    filters:
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      distortion: true
+      rotation: true
+      channelmix: true
+      lowpass: true
+    buffering:
+      duration: 400
+      thresholdUser: 10
+      thresholdDefault: 1
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO
+
+metrics:
+  prometheus:
+    enabled: false

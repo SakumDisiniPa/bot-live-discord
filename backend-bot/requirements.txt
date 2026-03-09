@@ -1,0 +1,4 @@
+py-cord
+wavelink
+PyNaCl
+python-dotenv
